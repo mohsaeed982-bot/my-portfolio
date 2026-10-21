@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.todo-container {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.todo-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.todo-header h1 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.todo-header p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* قسم الإدخال */
+.todo-input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input-section input {
+  flex: 1;
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.todo-input-section input:focus {
+  border-color: #fbbf24;
+}
+
+.todo-input-section button {
+  background-color: #fbbf24;
+  color: #020617;
+  border: none;
+  border-radius: 12px;
+  padding: 0 15px;
+  font-weight: 700;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.todo-input-section button:hover {
+  background-color: #fcd34d;
+}
+
+/* أزرار الفلتر */
+.todo-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  background-color: #020617;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+}
+
+.filter-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* قائمة المهام */
+.task-list {
+  list-style: none;
+  max-height: 260px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.task-text {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  word-break: break-all;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* حاوي النص والـ Checkbox */
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+/* تنسيق الـ Checkbox */
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #fbbf24;
+  cursor: pointer;
+}
+
+.task-item {
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+/* عند اكتمال المهمة */
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #f87171;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ذيل القائمة */
+.todo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #1e293b;
+  padding-top: 16px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #f87171;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.clear-btn:hover {
+  color: #ef4444;
+}

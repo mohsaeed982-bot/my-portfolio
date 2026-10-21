@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قائمة المهام اليومية | To-Do List</title>
+  <link rel="stylesheet" href="to-do.css">
+  <!-- خط عربي مريح (Cairo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="todo-container">
+    <header class="todo-header">
+      <h1>مهامي اليومية 📝</h1>
+      <p>أضف مهامك ونظّم يومك بكفاءة عالية</p>
+    </header>
+
+    <!-- حقل إضافة مهمة جديدة -->
+    <div class="todo-input-section">
+      <input type="text" id="taskInput" placeholder="اكتب مهمة جديدة هنا..." autocomplete="off">
+      <button id="addTaskBtn">إضافة</button>
+    </div>
+
+    <!-- فلتر المهام -->
+    <div class="todo-filters">
+      <button class="filter-btn active" data-filter="all">الكل</button>
+      <button class="filter-btn" data-filter="pending">قيد التنفيذ</button>
+      <button class="filter-btn" data-filter="completed">المكتملة</button>
+    </div>
+
+    <!-- قائمة المهام -->
+    <ul id="taskList" class="task-list">
+      <!-- ستضاف المهام هنا ديناميكياً عبر الجافاسكريبت -->
+    </ul>
+
+    <!-- ملخص وإحصائيات سريعة -->
+    <div class="todo-footer">
+      <span id="tasksCount">0 مهمة متبقية</span>
+      <button id="clearAllBtn" class="clear-btn">حذف الكل</button>
+    </div>
+  </div>
+
+  <script src="to-do.js"></script>
+</body>
+
+</html>
